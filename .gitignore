@@ -5,9 +5,6 @@ composer.lock
 
 # Kohana #
 ##########
-application/logs
-application/cache
-content/
 modules/
 
 # Compiled source #

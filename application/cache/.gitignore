@@ -1,0 +1,4 @@
+# Ignore this content folder #
+##############################
+*
+!.gitignore
