@@ -1,0 +1,20 @@
+{
+	"name": "Tanuki",
+	"type": "CMS",
+	"description": "A simple FlatFile ORM",
+	"keywords": ["kohana", "Flatfile", "Markdown", "CMS", "Tanuki"],
+	"homepage": "http://ziopod.com",
+	"licence": "MIT",
+	"authors": [
+		{
+			"name": "Steve Beau",
+			"email": "ziopod@gmail.com",
+			"role": "developer"
+		}
+	],
+	"require": {
+		"ziopod/tanuki-core": "dev-dev",
+		"kohana/core": "3.3.3.*"
+	}
+
+}
