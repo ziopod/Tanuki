@@ -147,11 +147,24 @@ Kohana::modules(array(
 // Cookie::$salt = NULL;
 
 /**
+* Autoload pages
+**/
+Route::set('pages', '<slug>', array(
+		// 'slug'	=> 'my_page', // restrict to a specific url
+		// 'slug'	=> '.*', // for any extension in url
+		'slug'	=> '[a-zA-Z0-9_/]+', // for subfolder
+	))
+	->defaults(array(
+		'controller'	=> 'Pages',
+		'action'		=> 'read',
+	));
+
+/**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-// Route::set('default', '(<controller>(/<action>(/<id>)))')
-// 	->defaults(array(
-// 		'controller' => 'Page',
-// 		'action'     => 'read',
-// 	));
+Route::set('default', '(<controller>(/<action>(/<id>)))')
+	->defaults(array(
+		'controller' => 'Page',
+		'action'     => 'read',
+	));
