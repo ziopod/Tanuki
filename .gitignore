@@ -7,7 +7,6 @@ composer.lock
 ##########
 modules/
 application/config/
-content/
 
 # Compiled source #
 ###################
