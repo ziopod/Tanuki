@@ -19,6 +19,6 @@ For dependencies, please use [Composer](https://getcomposer.org/).
 
  1. Download a copy of [last Tanuki release](https://github.com/ziopod/Tanuki/releases)
  2. Unzip file into your project directory  
- 2. Installl dependencies with Composer  
+ 3. Installl dependencies with Composer  
 	`$ cd my-project`  
 	`$ composer install`
