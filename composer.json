@@ -13,7 +13,7 @@
 		}
 	],
 	"require": {
-		"ziopod/tanuki-core": "0.0.1.*",
+		"ziopod/tanuki-core": "0.0.*",
 		"kohana/core": "3.3.3.*"
 	}
 
