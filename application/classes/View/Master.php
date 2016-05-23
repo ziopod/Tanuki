@@ -32,6 +32,12 @@ class View_Master extends View_Tanuki {
 				'name'		=> 'MIT',
 				'url'		=> 'http://opensource.org/licenses/mit-license.php',
 			),
+			'metas'			=> array(
+				array(
+					'name'		=> 'generator',
+					'content'	=> 'Tanuki',
+				),
+			),
 		);
 	}
 
