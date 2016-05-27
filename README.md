@@ -2,9 +2,9 @@
 A MVVM Flatfile CMS for Kohana
 
 ## Installation
+For dependencies, please use [Composer](https://getcomposer.org/).
 
 ### Install with git 
-For dependencies, please use [Composer](https://getcomposer.org/).
 
  1. Setup your local directory  
 	`$ mkdir my-project`  
