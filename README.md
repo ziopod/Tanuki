@@ -7,9 +7,9 @@ A MVVM Flatfile CMS for Kohana
 For dependencies, please use [Composer](https://getcomposer.org/).
 
  1. Setup your local directory  
-	`$ mkdir my-project`
-	`$ cd my-project` 
-	`$ git init`
+	`$ mkdir my-project`  
+	`$ cd my-project`  
+	`$ git init`  
  2. Grab a copy of Tanuki  
  	`$ git pull https://github.com/ziopod/Tanuki.git`
  3. Install dependencies with Composer  
