@@ -33,9 +33,7 @@ For example, if you want to auto-load a stylesheet, you can proceed like that :
 1. First add your custom view method to master file (`application/classes/View/Master.php`) 
 
 	
-	/**
-	* Stylesheets
-	**/
+	/** Stylesheets **/
 	public function styles()
 	{
 		return 	array(
