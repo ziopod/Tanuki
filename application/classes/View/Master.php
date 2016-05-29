@@ -69,4 +69,20 @@ class View_Master extends View_Tanuki {
 			)
 		);
 	}
+
+	/**
+	* Stylesheet definition
+	*
+	* @return array
+	**/
+	public function styles()
+	{
+		return array(
+			array(
+				'src'	=> 'assets/css/main.css',
+				'media'	=> 'screen',
+			)
+		);
+	}
+
 }

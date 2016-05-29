@@ -1,0 +1,32 @@
+/** Imports files **/
+@import (less) 'libs/reset.css';
+@import 'typo.less';
+@import 'grid.less';
+@import 'layout.less';
+
+/** Configurations **/
+// Font family
+@font-family		: Georgia, serif; 
+@font-family-heading: Georgia, serif; 
+@font-family-alt	: Arial, sans-serif; 
+@font-family-mono	: "Andale Mono", "Lucida Console", monospace;
+// Font size root & base definition
+@font-size-root		: 16px; // The default web browser font size, usefull for REM convertion
+@font-size-base		: 18px; // Your default font size, usefull for EM conversion
+// Font size
+@font-size-xx-large	: unit(46px/@font-size-base, em);
+@font-size-x-large	: unit(24px/@font-size-base, em);
+@font-size-large	: unit(26px/@font-size-base, em);
+@font-size			: unit(18px/@font-size-base, em);
+@font-size-small	: unit(16px/@font-size-base, em);
+@font-size-x-small	: unit(14px/@font-size-base, em);
+@font-size-xx-small	: unit(12px/@font-size-base, em);
+// Line height
+@font-line-height	: 1.5;
+// Colors
+@color: #F2B825;
+@color-text: #1A222F;
+@color-link: #E7773A;
+@color-link-visited: #F99157;
+@color-link-hover: #E35D27;
+@color-link-active: spin(@color-link, 180);
