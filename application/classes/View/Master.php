@@ -53,14 +53,20 @@ class View_Master extends View_Tanuki {
 				'url'		=> $this->base_url(),
 				'name'		=> __('Home'),
 				'title'		=> __('Go to Home'),
-				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->action() === 'home',
+				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->action() === 'home',
 			),
 			array(
 				'url'		=> $this->base_url() . 'about',
 				'name'		=> __('About'),
 				'title'		=> __('Go to example page'),
-				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'about',
+				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'about',
 			),
+			array(
+				'url'		=> $this->base_url() . 'vanilla-html',
+				'name'		=> __('Vanilla HTML'),
+				'title'		=> __('Go ot Vanilla HTML'),
+				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'vanilla-html',
+			)
 		);
 	}
 }
