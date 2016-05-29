@@ -71,7 +71,7 @@ mb_substitute_character('none');
  * Set the default language
  */
 I18n::lang('en-us');
-Cookie::$salt = '324FDC56GFD700QSDXN2H1';
+
 if (isset($_SERVER['SERVER_PROTOCOL']))
 {
 	// Replace the default protocol.
