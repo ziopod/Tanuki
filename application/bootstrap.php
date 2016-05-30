@@ -132,8 +132,8 @@ Kohana::modules(array(
 	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	'kostache'	=> DOCROOT.'vendor/zombor/kostache',
-	'flatfile'	=> MODPATH.'flatfile',
+	'kostache'		=> DOCROOT.'vendor/zombor/kostache',
+	'flatfile'		=> MODPATH.'flatfile',
 	'tanuki-core'	=> MODPATH.'tanuki-core',
 	));
 
@@ -144,7 +144,7 @@ Kohana::modules(array(
  * If you have not defined a cookie salt in your Cookie class then
  * uncomment the line below and define a preferrably long salt.
  */
-// Cookie::$salt = NULL;
+Cookie::$salt = Kohana::$config->load('tanuki.cookie_salt');
 
 /**
 * Autoload pages
