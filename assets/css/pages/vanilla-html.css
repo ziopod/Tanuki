@@ -1,0 +1,18 @@
+/** Additionnal CSS styles for Vanilla HTML Page **/
+/** Configurations **/
+a.link {
+  color: #2f4f4f !important;
+}
+a.hover {
+  color: #228b22 !important;
+}
+a.visited {
+  color: #3cb371 !important;
+}
+a.focus {
+  color: #228b22 !important;
+}
+a.active {
+  color: #40e0d0 !important;
+}
+/*# sourceMappingURL=vanilla-html.css.map */

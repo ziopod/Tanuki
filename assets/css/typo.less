@@ -1,13 +1,75 @@
-/** Typographies definition **/
+/**
+* Typographies and texts definition and white spaces
+**/
 
 // Body font
 body
 {
 	font: unit(((@font-size-base/@font-size-root) * 100), %)/@font-line-height @font-family;
+	color: @color-text;
+	background-color: @color-background;
 }
 
 // Headings
-h1
+h1, h2, h3, h4, h5, h6
 {
-	font-size: @font-size-xx-large;
+	font-family: @font-family-heading;
+	line-height: 1.1em;
+	margin-bottom: 1em;
 }
+h5, h6
+{
+	font-weight: bold;
+}
+h1 { font-size: @font-size-xxxlarge; }
+h2 { font-size: @font-size-xxlarge; }
+h3 { font-size: @font-size-xlarge; }
+h4 { font-size: @font-size-large; }
+
+// Margins and white spaces
+article, section aside, figure,
+table, ul, ol, dl,
+p, blockquote, address, hr, pre
+{
+	margin-bottom: @font-line-height;
+}
+
+// Emphasis
+em      { font-style: italic; }
+strong  { font-weight: bold; }
+q, cite
+{
+	font-style: italic;
+	em
+	{
+		font-style: normal;
+	}
+}
+
+// Blockuote and citations
+blockquote
+{
+	margin-left: .5em;
+	padding-left: 1em;
+	border-left: solid .5em @color-border;
+	color: @color-text-light;
+}
+
+// Code
+pre, code
+{
+	font-family: @font-family-mono;
+	background-color: @color-control;
+}
+code { padding: .2em;}
+pre { padding: 1em;}
+
+// Links
+a:link    { color: @color-link; }
+a:visited { color: @color-link-visited; }
+a:hover   { color: @color-link-hover; }
+a:focus   { color: @color-link-focus; }
+a:active  { color: @color-link-active; }
+
+// Miscellaneous
+address { font-style: italic; }

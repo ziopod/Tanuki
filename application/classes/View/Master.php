@@ -14,34 +14,6 @@
 class View_Master extends View_Tanuki {
 
 	/**
-	* Somes defaults globales data for all views
-	*
-	* @return	array	Global informations
-	**/
-	public function tanuki()
-	{
-		return array(
-			'title' 		=> "Tanuki Get it simple!",
-			'description'	=> "Just a simple web publishing design pattern",
-			'author'		=> array(
-				'name'		=> "Ziopod",
-				'email'		=> "hello@ziopod.com",
-				'url'		=> "http://ziopod.com",
-			),
-			'license'		=> array(
-				'name'		=> 'MIT',
-				'url'		=> 'http://opensource.org/licenses/mit-license.php',
-			),
-			'metas'			=> array(
-				array(
-					'name'		=> 'generator',
-					'content'	=> 'Tanuki',
-				),
-			),
-		);
-	}
-
-	/**
 	* Define main navigation
 	*
 	* @return 	array
@@ -77,12 +49,73 @@ class View_Master extends View_Tanuki {
 	**/
 	public function styles()
 	{
-		return array(
+		return array_merge(
+			parent::styles(),
 			array(
-				'src'	=> 'assets/css/main.css',
-				'media'	=> 'screen',
+				array(
+					'src'	=> 'assets/css/main.css',
+					'media'	=> 'screen',
+				)
 			)
 		);
 	}
+
+	// Push to Tanuki-core
+	/**
+	* Somes defaults global data for all views
+	*
+	* @return	array	Global informations
+	**/
+	public function tanuki()
+	{
+		return  Kohana::$config->load('tanuki');
+	}
+
+	/**
+	* Set HTML metas list
+	*
+	* Try to grab metas from Flatfile, even load metas from configuration file
+	*
+	* @return	array
+	**/
+	public function metas()
+	{
+		// Load metas from config file, remplaced by values set in Flatfile
+		$model_name = $this->model_name;
+		$default_metas = Kohana::$config->load('tanuki.metas');
+		$metas = array();
+
+		if ($default_metas)
+		{
+			foreach ($default_metas as $name => $content)
+			{
+				$metas[] = array(
+					'name' => $name,
+					'content' => $this->$model_name->$name ? $this->$model_name->$name : $content,
+				);
+			}			
+		}
+
+		return $metas;
+	}
+
+	/**
+	* Set HTML title tag
+	*
+	* @return	string
+	**/
+	public function title()
+	{
+		// Try to load title from model
+		$model_name = $this->model_name;
+
+		if (isset($this->$model_name->title))
+		{
+			return $this->$model_name->title;
+		}
+
+		// Instead use global config
+		return Kohana::$config->load('tanuki.title');
+	}	
 
 }

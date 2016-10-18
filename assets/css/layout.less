@@ -1,0 +1,101 @@
+/**
+* Layout structural white spaces and minimal elements contrast
+**/
+
+// Structural white spaces
+body > header,
+body > nav,
+main,
+body > footer
+{
+	padding: 1em;
+}
+
+// Lists
+ul { list-style: disc inside;}
+ol
+{
+	counter-reset: item;
+	li
+	{
+
+	} 
+	li::before
+	{
+		content: counters(item, ".") " ";
+		counter-increment: item;
+	}
+}
+
+ol ol li,
+ul ul li
+{
+	padding-left: 1em;
+}
+
+// Table
+table
+{
+	th
+	{
+		font-weight: bold;
+	}
+
+	th, td
+	{
+		padding: .5em;
+		border: 1px solid @color-control-border;
+	}
+
+	tr
+	{
+		background-color: @color-control;
+
+		&:nth-child(2n)
+		{
+			background-color: @color-control-highlight;
+		}
+	}
+}
+
+// Medias and figures
+
+// Forms
+/*form,
+fieldset
+{
+	margin-bottom: 1.5em;
+}
+legend
+{
+	font-weight: bold;
+	margin-bottom: 1.5em;
+}
+button,
+input,
+textarea,
+select,
+optgroup,
+{
+	font: inherit;
+	color: inherit;
+}
+input,
+textarea
+{
+	background-color: @color-control;
+	border: 1px solid @color-control-border;
+	padding: 0.2em 0.5em;
+	&:focus {border-color: @color-control-border-highlight;}
+}
+textarea { display: block; }
+optgroup
+{
+	font-weight: bold;
+}*/
+
+// Misc.
+hr
+{
+	border: solid 1px @color-control-border;
+}
